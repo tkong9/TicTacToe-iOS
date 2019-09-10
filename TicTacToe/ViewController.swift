@@ -47,25 +47,9 @@ class ViewController: UIViewController {
             }
         }
         
-        for combination in winningCombinations {
-            if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]] {
-
-                if gameState[combination[0]] == 1 {
-                    print("player1 has won.")
-                    winnerLabel.text = "Player1 has won."
-                    winnerLabel.isHidden = false
-                    playAgain.isHidden = false
-                } else {
-                    print("player2 has won")
-                    winnerLabel.text = "Player2 has won."
-                    winnerLabel.isHidden = false
-                    playAgain.isHidden = false
-                }
-                winnerLabel.isHidden = false
-                playAgain.isHidden = false
-                gameIsActive = false
-                return
-            }
+        // check for win
+        if checkForWin() {
+            return
         }
         
         gameIsActive = false
@@ -81,6 +65,32 @@ class ViewController: UIViewController {
             winnerLabel.isHidden = false
             playAgain.isHidden = false
         }
+    }
+    
+    func checkForWin() -> Bool {
+        for combination in winningCombinations {
+            if gameState[combination[0]] != 0 && gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]] {
+                // Somebody has won.
+                if gameState[combination[0]] == 1 {
+                    print("player1 has won.")
+                    winnerLabel.text = "Player1 has won."
+                    winnerLabel.isHidden = false
+                    playAgain.isHidden = false
+                } else {
+                    print("player2 has won")
+                    winnerLabel.text = "Player2 has won."
+                    winnerLabel.isHidden = false
+                    playAgain.isHidden = false
+                }
+                
+                winnerLabel.isHidden = false
+                playAgain.isHidden = false
+                gameIsActive = false
+                return true
+            }
+        }
+        // No winner yet.
+        return false
     }
     
     @IBAction func playAgainButton(_ sender: UIButton) {
