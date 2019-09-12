@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TwoPlayersVC: UIViewController {
     
     @IBOutlet weak var winnerLabel: UILabel!
     

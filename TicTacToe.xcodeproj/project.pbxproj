@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		CD362CB323218E09007C5C19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD362CB223218E09007C5C19 /* AppDelegate.swift */; };
-		CD362CB523218E09007C5C19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD362CB423218E09007C5C19 /* ViewController.swift */; };
+		CD362CB523218E09007C5C19 /* TwoPlayersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD362CB423218E09007C5C19 /* TwoPlayersVC.swift */; };
 		CD362CB823218E09007C5C19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD362CB623218E09007C5C19 /* Main.storyboard */; };
 		CD362CBA23218E0B007C5C19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD362CB923218E0B007C5C19 /* Assets.xcassets */; };
 		CD362CBD23218E0B007C5C19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD362CBB23218E0B007C5C19 /* LaunchScreen.storyboard */; };
+		CD4BA60D232A08B8007AC4AC /* OnePlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4BA60C232A08B8007AC4AC /* OnePlayerVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD362CAF23218E09007C5C19 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD362CB223218E09007C5C19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD362CB423218E09007C5C19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD362CB423218E09007C5C19 /* TwoPlayersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPlayersVC.swift; sourceTree = "<group>"; };
 		CD362CB723218E09007C5C19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD362CB923218E0B007C5C19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD362CBC23218E0B007C5C19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD362CBE23218E0B007C5C19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD4BA60C232A08B8007AC4AC /* OnePlayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePlayerVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				CD362CB223218E09007C5C19 /* AppDelegate.swift */,
-				CD362CB423218E09007C5C19 /* ViewController.swift */,
+				CD362CB423218E09007C5C19 /* TwoPlayersVC.swift */,
+				CD4BA60C232A08B8007AC4AC /* OnePlayerVC.swift */,
 				CD362CB623218E09007C5C19 /* Main.storyboard */,
 				CD362CB923218E0B007C5C19 /* Assets.xcassets */,
 				CD362CBB23218E0B007C5C19 /* LaunchScreen.storyboard */,
@@ -135,7 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD362CB523218E09007C5C19 /* ViewController.swift in Sources */,
+				CD362CB523218E09007C5C19 /* TwoPlayersVC.swift in Sources */,
+				CD4BA60D232A08B8007AC4AC /* OnePlayerVC.swift in Sources */,
 				CD362CB323218E09007C5C19 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
