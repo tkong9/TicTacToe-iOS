@@ -287,9 +287,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play Again"/>
                                 <connections>
-                                    <action selector="playAgainButton:" destination="HW2-v6-Zpu" eventType="touchUpInside" id="ZIr-vl-cPo"/>
-                                    <action selector="playAgainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mpb-kx-ylF"/>
-                                    <action selector="resetBtnClickedWithSender:" destination="HW2-v6-Zpu" eventType="touchUpInside" id="g90-s9-7j4"/>
+                                    <action selector="resetBtnClickedWithSender:" destination="HW2-v6-Zpu" eventType="touchUpInside" id="u6f-kJ-kOc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -313,10 +311,8 @@
                         <outlet property="button7" destination="wDe-Y1-zOz" id="7QE-Ka-pti"/>
                         <outlet property="button8" destination="rfc-49-lNj" id="0zq-dO-3X7"/>
                         <outlet property="button9" destination="Fxg-Ob-aZD" id="nHR-6g-1Xa"/>
-                        <outlet property="playAgain" destination="GAE-he-h1r" id="3xH-65-fUx"/>
                         <outlet property="resetBtn" destination="GAE-he-h1r" id="K0h-6N-ShR"/>
                         <outlet property="userMessage" destination="HzY-K8-hVk" id="S8s-N2-IfD"/>
-                        <outlet property="winnerLabel" destination="HzY-K8-hVk" id="12v-mY-nFW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="scc-LF-hyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
