@@ -88,7 +88,7 @@ class OnePlayerVC: UIViewController {
                 (plays[7] == value && plays[5] == value && plays[3] == value) || //diagonal
                 (plays[9] == value && plays[5] == value && plays[1] == value)) {  //diagonal
                 userMessage.isHidden = false
-                userMessage.text = "Looks like \(key) won!"
+                userMessage.text = NSLocalizedString("Looks like \(key) won!", comment: "")
                 resetBtn.isHidden = false;
                 done = true;
             }
@@ -325,7 +325,7 @@ class OnePlayerVC: UIViewController {
         
         userMessage.isHidden = false
         resetBtn.isHidden = false
-        userMessage.text = "DRAW!"
+        userMessage.text = NSLocalizedString("DRAW!", comment: "")
 
         //do we have two in a row
         

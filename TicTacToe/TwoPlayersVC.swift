@@ -72,7 +72,8 @@ class TwoPlayersVC: UIViewController {
             }
         }
         if gameIsActive == false {
-            winnerLabel.text = "DRAW!"
+//            winnerLabel.text = "DRAW!"
+            winnerLabel.text = NSLocalizedString("DRAW!", comment: "")
             winnerLabel.isHidden = false
             playAgain.isHidden = false
         }
@@ -84,12 +85,12 @@ class TwoPlayersVC: UIViewController {
                 // Somebody has won.
                 if gameState[combination[0]] == 1 {
 //                    print("player1 has won.")
-                    winnerLabel.text = "O has won."
+                    winnerLabel.text = NSLocalizedString("O has won!", comment: "")
                     winnerLabel.isHidden = false
                     playAgain.isHidden = false
                 } else {
 //                    print("player2 has won")
-                    winnerLabel.text = "X has won."
+                    winnerLabel.text = NSLocalizedString("X has won!", comment: "")
                     winnerLabel.isHidden = false
                     playAgain.isHidden = false
                 }

@@ -1,0 +1,17 @@
+/* 
+  File.strings
+  TicTacToe
+
+  Created by TAEWON KONG on 9/13/19.
+  Copyright © 2019 TAEWON KONG. All rights reserved.
+*/
+
+"DRAW!" = "引き分け!";
+
+"O has won!" = "O勝利!";
+
+"X has won!" = "X勝利!";
+
+"Looks like I won!" = "携帯電話の勝利!";
+
+"Looks like you won!" = "あなたの勝利!";
