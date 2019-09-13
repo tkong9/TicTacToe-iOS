@@ -11,6 +11,7 @@ import UIKit
 class OnePlayerVC: UIViewController {
     
     let user: Int = 1
+    
     let computer: Int = 0
     
     @IBOutlet weak var button1: UIButton!
@@ -24,34 +25,50 @@ class OnePlayerVC: UIViewController {
     @IBOutlet weak var button9: UIButton!
     
     @IBOutlet var resetBtn : UIButton!
+    
     @IBOutlet var userMessage : UILabel!
     
     var plays = [Int:Int]()
     
-    var done = false
+    var done: Bool = false
     
-    let aiDeciding = false
+    var aiIsDeciding: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         userMessage.isHidden = true
         resetBtn.isHidden = true
+        navigationController?.navigationBar.isHidden = false
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func UIButtonClicked(sender: UIButton) {
+        
+        if aiIsDeciding {
+            return
+        }
+        
         if plays[sender.tag] != nil {
             return
         }
         if !done {
             plays[sender.tag] = user
-            sender.setTitle("✗", for: .normal)
+            sender.setTitle("✖︎", for: .normal)
         }
         checkForWin()
         if done {
             return
         }
-        aiTurn()
+        
+        aiIsDeciding = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+            self.aiTurn()
+        })
     }
     
     @IBAction func resetBtnClicked(sender : UIButton) {
@@ -82,12 +99,13 @@ class OnePlayerVC: UIViewController {
         done = false
         resetBtn.isHidden = true
         userMessage.isHidden = true
+        aiIsDeciding = false
         plays = [:]
         for i in 1...9 {
             let button = view.viewWithTag(i) as! UIButton
             button.setTitle(nil, for: .normal)
         }
-        print("--------------------------------------------------")
+//        print("--------------------------------------------------")
     }
     
     func checkBottom(value:Int) -> [String] {
@@ -246,67 +264,68 @@ class OnePlayerVC: UIViewController {
     }
     
     func aiTurn() {
+        
 
         //We (the computer) have two in a row
         if let result = rowCheck(player: 0) {
-            print("computer has two in a row")
+//            print("computer has two in a row")
             let whereToPlayResult = whereToPlay(location: result[0], pattern: result[1])
             if !isOccupied(whereToPlayResult) {
                 plays[whereToPlayResult] = 0
                 let button = view.viewWithTag(whereToPlayResult) as! UIButton
                 button.setTitle("○", for: .normal)
-//                aiDeciding = false
+                aiIsDeciding = false
                 checkForWin()
                 return
             }
         }
         //They (the player) have two in a row
         if let result = rowCheck(player: 1) {
-            print("player has two in a row")
+//            print("player has two in a row")
             let whereToPlayResult = whereToPlay(location: result[0], pattern: result[1])
             if !isOccupied(whereToPlayResult) {
                 plays[whereToPlayResult] = computer
                 let button = view.viewWithTag(whereToPlayResult) as! UIButton
                 button.setTitle("○", for: .normal)
-//                aiDeciding = false
+                aiIsDeciding = false
                 checkForWin()
                 return
             }
         }
         //Is center available?
         if !isOccupied(5) {
-            print("Center is available")
+//            print("Center is available")
             plays[5] = computer
             let button = view.viewWithTag(5) as! UIButton
             button.setTitle("○", for: .normal)
-//            aiDeciding = false
+            aiIsDeciding = false
             checkForWin()
             return
         }
         
         if let cornerAvailable = firstAvailable(isCorner: true) {
-            print("cornerAvailable")
+//            print("cornerAvailable")
             plays[cornerAvailable] = computer
             let button = view.viewWithTag(cornerAvailable) as! UIButton
             button.setTitle("○", for: .normal)
-//            aiDeciding = false
+            aiIsDeciding = false
             checkForWin()
             return
         }
         
         if let sideAvailable = firstAvailable(isCorner: false) {
-            print("sideAvailable")
+//            print("sideAvailable")
             plays[sideAvailable] = computer
             let button = view.viewWithTag(sideAvailable) as! UIButton
             button.setTitle("○", for: .normal)
-//            aiDeciding = false
+            aiIsDeciding = false
             checkForWin()
             return
         }
         
         userMessage.isHidden = false
         resetBtn.isHidden = false
-        userMessage.text = "Looks like it was a tie!"
+        userMessage.text = "DRAW!"
 
         //do we have two in a row
         
@@ -332,4 +351,5 @@ class OnePlayerVC: UIViewController {
         
 //        aiDeciding = false
     }
+    
 }
