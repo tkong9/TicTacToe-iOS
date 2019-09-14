@@ -9,12 +9,26 @@
 import UIKit
 
 class IntroVC: UIViewController {
+    
+    @IBOutlet weak var player1Button: UIButton!
+    @IBOutlet weak var player2Button: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         navigationController?.navigationBar.isHidden = true
+        
+//        player1Button.backgroundColor = .clear
+//        player1Button.layer.cornerRadius = 5
+//        player1Button.layer.borderWidth = 1
+//        player1Button.layer.borderColor = UIColor.black.cgColor
+//        
+//        player2Button.backgroundColor = .clear
+//        player2Button.layer.cornerRadius = 5
+//        player2Button.layer.borderWidth = 1
+//        player2Button.layer.borderColor = UIColor.black.cgColor
     }
     
 
