@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="78O-d0-C0O">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--IntroVC-->
+        <scene sceneID="g7H-yu-iTD">
+            <objects>
+                <viewController id="07r-hS-lwE" customClass="IntroVC" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O62-hm-pcz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3q-KE-hHc">
+                                <rect key="frame" x="155.5" y="383" width="103" height="68"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
+                                <state key="normal" title="1 Player">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HW2-v6-Zpu" kind="show" id="Hph-an-O5p"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oxImage" translatesAutoresizingMaskIntoConstraints="NO" id="Alj-fz-OTu">
+                                <rect key="frame" x="107" y="243" width="200" height="90"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Toe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awF-MH-MBO">
+                                <rect key="frame" x="100" y="128" width="214" height="80"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDW-Ad-IdF">
+                                <rect key="frame" x="141.5" y="486" width="131" height="68"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="35"/>
+                                <state key="normal" title="2 Players">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="8SU-e2-SfS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Y3q-KE-hHc" firstAttribute="top" secondItem="Alj-fz-OTu" secondAttribute="bottom" constant="50" id="Ao1-2X-Nad"/>
+                            <constraint firstItem="Alj-fz-OTu" firstAttribute="top" secondItem="awF-MH-MBO" secondAttribute="bottom" constant="35" id="CBR-mO-W52"/>
+                            <constraint firstItem="awF-MH-MBO" firstAttribute="centerX" secondItem="O62-hm-pcz" secondAttribute="centerX" id="LiX-Ea-VXT"/>
+                            <constraint firstItem="Alj-fz-OTu" firstAttribute="centerX" secondItem="O62-hm-pcz" secondAttribute="centerX" id="MmX-mp-3kp"/>
+                            <constraint firstItem="cDW-Ad-IdF" firstAttribute="top" secondItem="Y3q-KE-hHc" secondAttribute="bottom" constant="35" id="ngb-Jg-zIq"/>
+                            <constraint firstItem="cDW-Ad-IdF" firstAttribute="centerX" secondItem="O62-hm-pcz" secondAttribute="centerX" id="uRg-mi-YG7"/>
+                            <constraint firstItem="awF-MH-MBO" firstAttribute="top" secondItem="ozA-ti-hFh" secondAttribute="top" constant="40" id="vTD-Im-ggj"/>
+                            <constraint firstItem="Y3q-KE-hHc" firstAttribute="centerX" secondItem="O62-hm-pcz" secondAttribute="centerX" id="w0x-Bd-ukA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ozA-ti-hFh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dXI-PR-bSX"/>
+                    <connections>
+                        <outlet property="player1Button" destination="Y3q-KE-hHc" id="3V1-qE-1y2"/>
+                        <outlet property="player2Button" destination="cDW-Ad-IdF" id="9hA-aT-LOJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i9H-JV-w3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-71.014492753623188" y="270.53571428571428"/>
+        </scene>
+        <!--Two PlayersVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TwoPlayersVC" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gjp-kV-2nm">
+                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0El-pC-WOg">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="131.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YuX-kJ-Uuh">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="131.5"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UNV-fV-Sn4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sd2-dc-zgR">
+                                                <rect key="frame" x="141.5" y="0.0" width="131" height="131.5"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cel-RX-8mK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xjt-Ft-xi6">
+                                                <rect key="frame" x="282.5" y="0.0" width="131.5" height="131.5"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yho-BK-Vjs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OBI-Jw-a78">
+                                        <rect key="frame" x="0.0" y="141.5" width="414" height="131"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGg-B6-ZVy">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="131"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gKj-1G-ARf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNk-0D-l1g">
+                                                <rect key="frame" x="141.5" y="0.0" width="131" height="131"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rB6-5K-YHh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6N5-Sw-1Dh">
+                                                <rect key="frame" x="282.5" y="0.0" width="131.5" height="131"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4KT-ff-Svj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ckt-ne-uCu">
+                                        <rect key="frame" x="0.0" y="282.5" width="414" height="131.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWz-6q-iyB">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="131.5"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gdh-cM-bA9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L2-ud-o3e">
+                                                <rect key="frame" x="141.5" y="0.0" width="131" height="131.5"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Wc-lK-fn7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOp-kc-pRJ">
+                                                <rect key="frame" x="282.5" y="0.0" width="131.5" height="131.5"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNg-bM-Kzx"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gjp-kV-2nm" secondAttribute="height" id="rbd-mM-Jg4"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player1 has won" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWy-uL-o1y">
+                                <rect key="frame" x="116.5" y="163" width="181" height="48"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35p-yc-0sN">
+                                <rect key="frame" x="144.5" y="715" width="125" height="60"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="playAgainButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7PE-7R-Ncw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Gjp-kV-2nm" firstAttribute="top" secondItem="gWy-uL-o1y" secondAttribute="bottom" constant="30" id="5HC-x3-6NG"/>
+                            <constraint firstItem="Gjp-kV-2nm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9ht-cV-eCh"/>
+                            <constraint firstItem="Gjp-kV-2nm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JoB-mT-FKa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gjp-kV-2nm" secondAttribute="trailing" id="KAe-zh-aHr"/>
+                            <constraint firstItem="gWy-uL-o1y" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ihN-f6-yWc"/>
+                            <constraint firstItem="35p-yc-0sN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rg4-yh-4i6"/>
+                            <constraint firstItem="35p-yc-0sN" firstAttribute="top" secondItem="Gjp-kV-2nm" secondAttribute="bottom" constant="60" id="wXA-ME-3yj"/>
+                            <constraint firstItem="Gjp-kV-2nm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zxJ-a3-WFc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="playAgain" destination="35p-yc-0sN" id="CfU-hx-IY1"/>
+                        <outlet property="winnerLabel" destination="gWy-uL-o1y" id="DR2-aZ-AD8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758" y="714"/>
+        </scene>
+        <!--One PlayerVC-->
+        <scene sceneID="ih1-bv-LCA">
+            <objects>
+                <viewController id="HW2-v6-Zpu" customClass="OnePlayerVC" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aqm-ES-wfn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rzr-8P-uS3">
+                                <rect key="frame" x="0.0" y="241" width="414" height="414"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="laq-zu-teZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="131.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ox-4f-Zr6">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="131.5"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="UIButtonClickedWithSender:" destination="HW2-v6-Zpu" eventType="touchUpInside" id="qCf-yH-gNG"/>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LFL-Gr-Omb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuN-vy-6Tf">
+                                                <rect key="frame" x="141.5" y="0.0" width="131" height="131.5"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="UIButtonClickedWithSender:" destination="HW2-v6-Zpu" eventType="touchUpInside" id="7Qx-Zb-SKg"/>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XG0-iD-ujU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7u-po-hpu">
+                                                <rect key="frame" x="282.5" y="0.0" width="131.5" height="131.5"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="UIButtonClickedWithSender:" destination="HW2-v6-Zpu" eventType="touchUpInside" id="KON-oc-qoe"/>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wtX-8h-ZVa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pSc-Dv-nnY">
+                                        <rect key="frame" x="0.0" y="141.5" width="414" height="131"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leS-MD-ej9">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="131"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="UIButtonClickedWithSender:" destination="HW2-v6-Zpu" eventType="touchUpInside" id="qam-xD-JHF"/>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wVf-Y1-y0a"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9S-xO-TXv">
+                                                <rect key="frame" x="141.5" y="0.0" width="131" height="131"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="UIButtonClickedWithSender:" destination="HW2-v6-Zpu" eventType="touchUpInside" id="pJV-JC-KDe"/>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rm5-np-6tJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTR-zg-JdQ">
+                                                <rect key="frame" x="282.5" y="0.0" width="131.5" height="131"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="UIButtonClickedWithSender:" destination="HW2-v6-Zpu" eventType="touchUpInside" id="ICg-uF-Yf5"/>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tvk-28-rMb"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7dO-6h-YBr">
+                                        <rect key="frame" x="0.0" y="282.5" width="414" height="131.5"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDe-Y1-zOz">
+                                                <rect key="frame" x="0.0" y="0.0" width="131.5" height="131.5"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="UIButtonClickedWithSender:" destination="HW2-v6-Zpu" eventType="touchUpInside" id="FQY-AD-Mgt"/>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3HJ-n8-zoo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfc-49-lNj">
+                                                <rect key="frame" x="141.5" y="0.0" width="131" height="131.5"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="UIButtonClickedWithSender:" destination="HW2-v6-Zpu" eventType="touchUpInside" id="Aab-dC-WDw"/>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kqo-jD-rmU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fxg-Ob-aZD">
+                                                <rect key="frame" x="282.5" y="0.0" width="131.5" height="131.5"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="70"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="UIButtonClickedWithSender:" destination="HW2-v6-Zpu" eventType="touchUpInside" id="Tv8-sJ-njY"/>
+                                                    <action selector="playerPressedAButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Scx-OZ-1RQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rzr-8P-uS3" secondAttribute="height" id="gaF-UC-Va4"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAE-he-h1r">
+                                <rect key="frame" x="144.5" y="715" width="125" height="60"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <state key="normal" title="Play Again"/>
+                                <connections>
+                                    <action selector="resetBtnClickedWithSender:" destination="HW2-v6-Zpu" eventType="touchUpInside" id="u6f-kJ-kOc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player1 has won" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HzY-K8-hVk">
+                                <rect key="frame" x="116.5" y="163" width="181" height="48"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GAE-he-h1r" firstAttribute="centerX" secondItem="Aqm-ES-wfn" secondAttribute="centerX" id="JPT-sU-1aS"/>
+                            <constraint firstItem="rzr-8P-uS3" firstAttribute="top" secondItem="HzY-K8-hVk" secondAttribute="bottom" constant="30" id="L4n-9O-3fS"/>
+                            <constraint firstItem="GAE-he-h1r" firstAttribute="top" secondItem="rzr-8P-uS3" secondAttribute="bottom" constant="60" id="LzE-hl-znk"/>
+                            <constraint firstItem="HzY-K8-hVk" firstAttribute="centerX" secondItem="Aqm-ES-wfn" secondAttribute="centerX" id="QdP-eU-rM2"/>
+                            <constraint firstItem="rzr-8P-uS3" firstAttribute="width" secondItem="rzr-8P-uS3" secondAttribute="height" id="Shr-a1-Yes"/>
+                            <constraint firstItem="ou3-3E-cvU" firstAttribute="trailing" secondItem="rzr-8P-uS3" secondAttribute="trailing" id="YrC-Op-l9P"/>
+                            <constraint firstItem="rzr-8P-uS3" firstAttribute="centerY" secondItem="Aqm-ES-wfn" secondAttribute="centerY" id="k42-jy-Q41"/>
+                            <constraint firstItem="rzr-8P-uS3" firstAttribute="leading" secondItem="ou3-3E-cvU" secondAttribute="leading" id="kJs-si-9mD"/>
+                            <constraint firstItem="rzr-8P-uS3" firstAttribute="centerX" secondItem="Aqm-ES-wfn" secondAttribute="centerX" id="zsA-V0-zdu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ou3-3E-cvU"/>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="4Ox-4f-Zr6" id="ZhP-0D-exc"/>
+                        <outlet property="button2" destination="fuN-vy-6Tf" id="yQl-MY-6OH"/>
+                        <outlet property="button3" destination="D7u-po-hpu" id="zdh-Mo-uGk"/>
+                        <outlet property="button4" destination="leS-MD-ej9" id="n5H-3q-OqR"/>
+                        <outlet property="button5" destination="F9S-xO-TXv" id="nPe-6Z-LWV"/>
+                        <outlet property="button6" destination="HTR-zg-JdQ" id="uR2-AL-j6v"/>
+                        <outlet property="button7" destination="wDe-Y1-zOz" id="7QE-Ka-pti"/>
+                        <outlet property="button8" destination="rfc-49-lNj" id="0zq-dO-3X7"/>
+                        <outlet property="button9" destination="Fxg-Ob-aZD" id="nHR-6g-1Xa"/>
+                        <outlet property="resetBtn" destination="GAE-he-h1r" id="K0h-6N-ShR"/>
+                        <outlet property="userMessage" destination="HzY-K8-hVk" id="S8s-N2-IfD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scc-LF-hyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="759" y="0.0"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="myr-rF-vc1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="78O-d0-C0O" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="szQ-g8-272">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="07r-hS-lwE" kind="relationship" relationship="rootViewController" id="GOy-fi-HU9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rOG-Ae-g3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-952" y="271"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="oxImage" width="200" height="90"/>
+    </resources>
+</document>
